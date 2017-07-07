@@ -1,8 +1,11 @@
 #pragma once
-class main
-{
-public:
-	main();
-	~main();
-};
+
+namespace castle {
+	class main
+	{
+	public:
+		main();
+		~main();
+	};
+}
 
