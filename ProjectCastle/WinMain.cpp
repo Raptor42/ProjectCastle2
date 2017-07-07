@@ -41,7 +41,7 @@ int WinMain()
 	colorSize.setPosition(10, 110);
 	squareSize.setPosition(10, 160);
 
-	gridSize.setFillColor(sf::Color::Black);
+	gridSize.setFillColor(sf::Color::White);
 	screenSizeText.setFillColor(sf::Color::Black);
 	colorSize.setFillColor(sf::Color::Black);
 	squareSize.setFillColor(sf::Color::Black);
@@ -50,12 +50,19 @@ int WinMain()
 
 	while (window.isOpen())
 	{
+		sf::Event event;
+		while (window.pollEvent(event))
+		{
+			if (event.type == sf::Event::Closed)
+				window.close();
+		}
 
 		sf::Vector2u screenSize = window.getSize();
 		unsigned int screenWidth = screenSize.x;
 		unsigned int screenHeight = screenSize.y;
 
 		std::string screenSizeString = "Screen Size: (" + std::to_string(screenWidth) + "," + std::to_string(screenHeight) + ")";
+
 		screenSizeText.setString(screenSizeString);
 
 		int squareLength = 20;
@@ -84,13 +91,6 @@ int WinMain()
 				grid[i][j].setPosition(i*squareLength, j*squareLength);
 				grid[i][j].setFillColor(sf::Color((colorXStep*i), (colorYStep*j), 128));
 			}
-		}
-
-		sf::Event event;
-		while (window.pollEvent(event))
-		{
-			if (event.type == sf::Event::Closed)
-				window.close();
 		}
 
 		window.clear();

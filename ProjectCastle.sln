@@ -1,9 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.14
+VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProjectCastle", "ProjectCastle\ProjectCastle.vcxproj", "{35DF9637-C727-423F-91BB-ECF1BAFDDE9C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "resources", "resources", "{D4521ED7-9167-4281-B39B-3A5B68C1EFFD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "fonts", "fonts", "{B33D4949-E0BE-4DD5-8D1B-6121CCA533A1}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\segoeuib.ttf = ..\..\..\segoeuib.ttf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tiles", "tiles", "{ABB38993-0EFB-4B1F-B9AA-1617B5F87C8D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "music", "music", "{7A275A15-A5D4-4DDF-A0CB-B640AFCF5161}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +35,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B33D4949-E0BE-4DD5-8D1B-6121CCA533A1} = {D4521ED7-9167-4281-B39B-3A5B68C1EFFD}
+		{ABB38993-0EFB-4B1F-B9AA-1617B5F87C8D} = {D4521ED7-9167-4281-B39B-3A5B68C1EFFD}
+		{7A275A15-A5D4-4DDF-A0CB-B640AFCF5161} = {D4521ED7-9167-4281-B39B-3A5B68C1EFFD}
 	EndGlobalSection
 EndGlobal
